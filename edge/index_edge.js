@@ -22,13 +22,21 @@ var symbols = {
    content: {
          dom: [
          {
-            id:'glosprismedit2',
+            id:'RoundRect',
+            type:'rect',
+            rect:['1334px','387px','139px','106px','auto','auto'],
+            borderRadius:["77px 77px","10px","10px","75px 75px"],
+            fill:["rgba(255,255,255,1.00)"],
+            stroke:[0,"rgba(0,0,0,1)","none"]
+         },
+         {
+            id:'Prism',
             type:'image',
             rect:['1186px','393px','154px','106px','auto','auto'],
             fill:["rgba(0,0,0,0)",im+"glosprismedit2.jpg",'0px','0px']
          },
          {
-            id:'Rectangle5',
+            id:'Beam4',
             type:'rect',
             rect:['925px','440px','225px','18px','auto','auto'],
             fill:["rgba(255,255,255,1.00)"],
@@ -36,28 +44,28 @@ var symbols = {
             transform:[[],['0deg'],['-30deg','0deg'],['1.59']]
          },
          {
-            id:'Rectangle2',
-            type:'rect',
-            rect:['759px','440px','82px','18px','auto','auto'],
-            fill:["rgba(235,241,246,1)"],
-            stroke:[1,"rgb(0, 0, 0)","solid"]
-         },
-         {
-            id:'Rectangle3',
-            type:'rect',
-            rect:['620px','440px','137px','18px','auto','auto'],
-            fill:["rgba(235,241,246,1)"],
-            stroke:[1,"rgb(0, 0, 0)","solid"]
-         },
-         {
-            id:'Rectangle4',
+            id:'Beam3',
             type:'rect',
             rect:['836px','440px','82px','18px','auto','auto'],
             fill:["rgba(235,241,246,1)"],
             stroke:[1,"rgb(0, 0, 0)","solid"]
          },
          {
-            id:'EllipseCopy2',
+            id:'Beam2',
+            type:'rect',
+            rect:['759px','440px','82px','18px','auto','auto'],
+            fill:["rgba(235,241,246,1)"],
+            stroke:[1,"rgb(0, 0, 0)","solid"]
+         },
+         {
+            id:'Beam1',
+            type:'rect',
+            rect:['620px','440px','137px','18px','auto','auto'],
+            fill:["rgba(235,241,246,1)"],
+            stroke:[1,"rgb(0, 0, 0)","solid"]
+         },
+         {
+            id:'Lens3',
             type:'ellipse',
             rect:['734px','393px','24px','111px','auto','auto'],
             borderRadius:["50%","50%","50%","50%"],
@@ -65,7 +73,7 @@ var symbols = {
             stroke:[1,"rgb(0, 0, 0)","solid"]
          },
          {
-            id:'EllipseCopy',
+            id:'Lens2',
             type:'ellipse',
             rect:['895px','393px','24px','111px','auto','auto'],
             borderRadius:["50%","50%","50%","50%"],
@@ -73,7 +81,7 @@ var symbols = {
             stroke:[1,"rgb(0, 0, 0)","solid"]
          },
          {
-            id:'Ellipse',
+            id:'Lens1',
             type:'ellipse',
             rect:['818px','393px','24px','111px','auto','auto'],
             borderRadius:["50%","50%","50%","50%"],
@@ -81,7 +89,7 @@ var symbols = {
             stroke:[1,"rgb(0, 0, 0)","solid"]
          },
          {
-            id:'Ellipse2',
+            id:'Source',
             type:'ellipse',
             rect:['552px','412px','66px','72px','auto','auto'],
             borderRadius:["59.8% 59.8%","222% 222%","192% 192%","59.8% 59.8%"],
@@ -96,14 +104,6 @@ var symbols = {
             text:"Source<br>",
             align:"left",
             font:['Arial, Helvetica, sans-serif',24,"rgba(0,0,0,1)","normal","none","normal"]
-         },
-         {
-            id:'RoundRect',
-            type:'rect',
-            rect:['1334px','387px','139px','106px','auto','auto'],
-            borderRadius:["77px 77px","10px","10px","75px 75px"],
-            fill:["rgba(255,255,255,1.00)"],
-            stroke:[0,"rgba(0,0,0,1)","none"]
          }],
          symbolInstances: [
 
@@ -111,60 +111,46 @@ var symbols = {
       },
    states: {
       "Base State": {
-         "${_Ellipse2}": [
+         "${_Source}": [
             ["color", "background-color", 'rgba(134,107,107,1.00)'],
             ["style", "border-top-left-radius", [59.8,59.8], {valueTemplate:'@@0@@% @@1@@%'} ],
-            ["style", "left", '551.61px'],
+            ["style", "top", '412.24px'],
             ["transform", "rotateZ", '-181deg'],
-            ["style", "border-bottom-right-radius", [192,192], {valueTemplate:'@@0@@% @@1@@%'} ],
-            ["style", "border-bottom-left-radius", [59.8,59.8], {valueTemplate:'@@0@@% @@1@@%'} ],
             ["style", "border-top-right-radius", [222,222], {valueTemplate:'@@0@@% @@1@@%'} ],
-            ["style", "top", '412.24px']
+            ["style", "border-bottom-left-radius", [59.8,59.8], {valueTemplate:'@@0@@% @@1@@%'} ],
+            ["style", "left", '551.61px'],
+            ["style", "border-bottom-right-radius", [192,192], {valueTemplate:'@@0@@% @@1@@%'} ]
          ],
-         "${_glosprismedit2}": [
-            ["style", "height", '106.296875px'],
-            ["style", "top", '392.68px'],
-            ["style", "left", '1186.39px'],
-            ["style", "width", '153.6px']
-         ],
-         "${_Text2}": [
-            ["style", "height", '25.333333333333px'],
-            ["style", "top", '434.68px'],
-            ["style", "left", '551.39px'],
-            ["style", "width", '68.616536458333px']
-         ],
-         "${_RoundRect}": [
-            ["style", "top", '387px'],
-            ["style", "border-bottom-left-radius", [75,75], {valueTemplate:'@@0@@px @@1@@px'} ],
-            ["style", "border-top-left-radius", [77,77], {valueTemplate:'@@0@@px @@1@@px'} ],
-            ["style", "left", '1333.76px'],
-            ["color", "background-color", 'rgba(255,255,255,1.00)']
-         ],
-         "${_EllipseCopy2}": [
+         "${_Lens3}": [
             ["style", "top", '392.68px'],
             ["style", "height", '111.41666412354px'],
             ["style", "border-style", 'solid'],
             ["style", "left", '733.66px'],
             ["style", "width", '23.746616363525px']
          ],
-         "${_Rectangle3}": [
+         "${_RoundRect}": [
+            ["style", "top", '387px'],
+            ["style", "border-top-left-radius", [77,77], {valueTemplate:'@@0@@px @@1@@px'} ],
+            ["color", "background-color", 'rgba(255,255,255,1.00)'],
+            ["style", "left", '1333.76px'],
+            ["style", "border-bottom-left-radius", [75,75], {valueTemplate:'@@0@@px @@1@@px'} ]
+         ],
+         "${_Text2}": [
+            ["style", "top", '434.68px'],
+            ["style", "height", '25.333333333333px'],
+            ["style", "left", '551.39px'],
+            ["style", "width", '68.616536458333px']
+         ],
+         "${_Beam1}": [
             ["style", "top", '439.68px'],
             ["style", "left", '620.39px']
          ],
-         "${_Ellipse}": [
-            ["style", "top", '392.68px'],
-            ["style", "height", '111.41666412354px'],
-            ["style", "border-style", 'solid'],
-            ["style", "left", '817.66px'],
-            ["style", "width", '23.746616363525px']
+         "${_Beam3}": [
+            ["style", "top", '439.68px'],
+            ["style", "left", '836.39px'],
+            ["style", "width", '82px']
          ],
-         "${_Stage}": [
-            ["color", "background-color", 'rgba(1,0,0,1.00)'],
-            ["style", "overflow", 'hidden'],
-            ["style", "height", '1000px'],
-            ["style", "width", '2000px']
-         ],
-         "${_Rectangle5}": [
+         "${_Beam4}": [
             ["color", "background-color", 'rgba(255,255,255,1.00)'],
             ["style", "top", '439.68px'],
             ["transform", "skewY", '0deg'],
@@ -174,7 +160,18 @@ var symbols = {
             ["style", "left", '925.2px'],
             ["style", "width", '225.47767316326px']
          ],
-         "${_EllipseCopy}": [
+         "${_Beam2}": [
+            ["style", "top", '439.68px'],
+            ["style", "left", '759.39px'],
+            ["style", "width", '82px']
+         ],
+         "${_Stage}": [
+            ["color", "background-color", 'rgba(1,0,0,1.00)'],
+            ["style", "width", '2000px'],
+            ["style", "height", '1000px'],
+            ["style", "overflow", 'hidden']
+         ],
+         "${_Lens2}": [
             ["style", "top", '392.68px'],
             ["style", "-webkit-transform-origin", [50,50], {valueTemplate:'@@0@@% @@1@@%'} ],
             ["style", "-moz-transform-origin", [50,50],{valueTemplate:'@@0@@% @@1@@%'}],
@@ -186,15 +183,18 @@ var symbols = {
             ["style", "left", '894.66px'],
             ["style", "width", '23.746616363525px']
          ],
-         "${_Rectangle4}": [
-            ["style", "top", '439.68px'],
-            ["style", "left", '836.39px'],
-            ["style", "width", '82px']
+         "${_Lens1}": [
+            ["style", "top", '392.68px'],
+            ["style", "height", '111.41666412354px'],
+            ["style", "border-style", 'solid'],
+            ["style", "left", '817.66px'],
+            ["style", "width", '23.746616363525px']
          ],
-         "${_Rectangle2}": [
-            ["style", "top", '439.68px'],
-            ["style", "left", '759.39px'],
-            ["style", "width", '82px']
+         "${_Prism}": [
+            ["style", "top", '392.68px'],
+            ["style", "height", '106.296875px'],
+            ["style", "left", '1186.39px'],
+            ["style", "width", '153.6px']
          ]
       }
    },
