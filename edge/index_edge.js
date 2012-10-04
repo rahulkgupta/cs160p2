@@ -96,6 +96,14 @@ var symbols = {
             text:"Source<br>",
             align:"left",
             font:['Arial, Helvetica, sans-serif',24,"rgba(0,0,0,1)","normal","none","normal"]
+         },
+         {
+            id:'RoundRect',
+            type:'rect',
+            rect:['1334px','387px','139px','106px','auto','auto'],
+            borderRadius:["77px 77px","10px","10px","75px 75px"],
+            fill:["rgba(255,255,255,1.00)"],
+            stroke:[0,"rgba(0,0,0,1)","none"]
          }],
          symbolInstances: [
 
@@ -103,42 +111,41 @@ var symbols = {
       },
    states: {
       "Base State": {
-         "${_Rectangle2}": [
-            ["style", "top", '439.68px'],
-            ["style", "left", '759.39px'],
-            ["style", "width", '82px']
-         ],
-         "${_glosprismedit2}": [
-            ["style", "top", '392.68px'],
-            ["style", "height", '106.296875px'],
-            ["style", "left", '1186.39px'],
-            ["style", "width", '153.6px']
-         ],
          "${_Ellipse2}": [
             ["color", "background-color", 'rgba(134,107,107,1.00)'],
             ["style", "border-top-left-radius", [59.8,59.8], {valueTemplate:'@@0@@% @@1@@%'} ],
+            ["style", "left", '551.61px'],
             ["transform", "rotateZ", '-181deg'],
-            ["style", "border-top-right-radius", [222,222], {valueTemplate:'@@0@@% @@1@@%'} ],
-            ["style", "top", '412.24px'],
-            ["style", "border-bottom-left-radius", [59.8,59.8], {valueTemplate:'@@0@@% @@1@@%'} ],
             ["style", "border-bottom-right-radius", [192,192], {valueTemplate:'@@0@@% @@1@@%'} ],
-            ["style", "left", '551.61px']
+            ["style", "border-bottom-left-radius", [59.8,59.8], {valueTemplate:'@@0@@% @@1@@%'} ],
+            ["style", "border-top-right-radius", [222,222], {valueTemplate:'@@0@@% @@1@@%'} ],
+            ["style", "top", '412.24px']
+         ],
+         "${_glosprismedit2}": [
+            ["style", "height", '106.296875px'],
+            ["style", "top", '392.68px'],
+            ["style", "left", '1186.39px'],
+            ["style", "width", '153.6px']
          ],
          "${_Text2}": [
-            ["style", "top", '434.68px'],
             ["style", "height", '25.333333333333px'],
+            ["style", "top", '434.68px'],
             ["style", "left", '551.39px'],
             ["style", "width", '68.616536458333px']
          ],
-         "${_Rectangle5}": [
-            ["color", "background-color", 'rgba(255,255,255,1.00)'],
-            ["style", "top", '439.68px'],
-            ["transform", "skewY", '0deg'],
-            ["transform", "skewX", '-30deg'],
-            ["transform", "scaleX", '1.59'],
-            ["transform", "rotateZ", '0deg'],
-            ["style", "left", '925.2px'],
-            ["style", "width", '225.47767316326px']
+         "${_RoundRect}": [
+            ["style", "top", '387px'],
+            ["style", "border-bottom-left-radius", [75,75], {valueTemplate:'@@0@@px @@1@@px'} ],
+            ["style", "border-top-left-radius", [77,77], {valueTemplate:'@@0@@px @@1@@px'} ],
+            ["style", "left", '1333.76px'],
+            ["color", "background-color", 'rgba(255,255,255,1.00)']
+         ],
+         "${_EllipseCopy2}": [
+            ["style", "top", '392.68px'],
+            ["style", "height", '111.41666412354px'],
+            ["style", "border-style", 'solid'],
+            ["style", "left", '733.66px'],
+            ["style", "width", '23.746616363525px']
          ],
          "${_Rectangle3}": [
             ["style", "top", '439.68px'],
@@ -151,16 +158,21 @@ var symbols = {
             ["style", "left", '817.66px'],
             ["style", "width", '23.746616363525px']
          ],
-         "${_Rectangle4}": [
-            ["style", "top", '439.68px'],
-            ["style", "left", '836.39px'],
-            ["style", "width", '82px']
-         ],
          "${_Stage}": [
             ["color", "background-color", 'rgba(1,0,0,1.00)'],
-            ["style", "width", '2000px'],
+            ["style", "overflow", 'hidden'],
             ["style", "height", '1000px'],
-            ["style", "overflow", 'hidden']
+            ["style", "width", '2000px']
+         ],
+         "${_Rectangle5}": [
+            ["color", "background-color", 'rgba(255,255,255,1.00)'],
+            ["style", "top", '439.68px'],
+            ["transform", "skewY", '0deg'],
+            ["transform", "skewX", '-30deg'],
+            ["transform", "scaleX", '1.59'],
+            ["transform", "rotateZ", '0deg'],
+            ["style", "left", '925.2px'],
+            ["style", "width", '225.47767316326px']
          ],
          "${_EllipseCopy}": [
             ["style", "top", '392.68px'],
@@ -174,12 +186,15 @@ var symbols = {
             ["style", "left", '894.66px'],
             ["style", "width", '23.746616363525px']
          ],
-         "${_EllipseCopy2}": [
-            ["style", "top", '392.68px'],
-            ["style", "height", '111.41666412354px'],
-            ["style", "border-style", 'solid'],
-            ["style", "left", '733.66px'],
-            ["style", "width", '23.746616363525px']
+         "${_Rectangle4}": [
+            ["style", "top", '439.68px'],
+            ["style", "left", '836.39px'],
+            ["style", "width", '82px']
+         ],
+         "${_Rectangle2}": [
+            ["style", "top", '439.68px'],
+            ["style", "left", '759.39px'],
+            ["style", "width", '82px']
          ]
       }
    },
