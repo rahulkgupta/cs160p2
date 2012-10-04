@@ -8,4 +8,4 @@ class Doc(models.Model):
     math = models.BooleanField()
     name = models.CharField(max_length=200)
     date = models.DateTimeField()
-    author = = models.CharField(max_length=200)
+    author = models.CharField(max_length=200)
