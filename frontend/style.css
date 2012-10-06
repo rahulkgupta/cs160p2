@@ -5,7 +5,7 @@ span{ display: block; }
 
 
 #lens1 {
-  background-image: url("lens.png");
+  background-image: url("smalllens.png");
   position: absolute;
   width:  90px;
   height: 282px;
@@ -14,7 +14,7 @@ span{ display: block; }
 
 }
 #lens2 {
-  background-image: url("lens.png");
+  background-image: url("smalllens.png");
   position: absolute;
   width:  90px;
   height: 282px;
@@ -24,7 +24,7 @@ span{ display: block; }
 
 #lens3 {
   /*background-color: white;*/
-  background-image: url("lens.png");
+  background-image: url("smalllens.png");
   position: absolute;
   width:  90px;
   height: 282px;
