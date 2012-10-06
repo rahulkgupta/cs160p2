@@ -3,6 +3,8 @@
 
 
 
+
+
 $(document).ready(function() {
   
   lensList = [false, false, false]
@@ -14,7 +16,14 @@ $(document).ready(function() {
   color5 = "408040" //123
   color6 = "248F61" //13
   color7 = "99661A" //23
-  
+  $("#lens1menu").hide();
+  $("#lens2menu").hide();
+  $("#lens3menu").hide();
+  $("#prismmenu").hide();
+
+
+
+
   function toString(color){
     string = "black " + color + " black"
     // console.log(string)
@@ -87,7 +96,7 @@ $(document).ready(function() {
 
 
   $("#lens1").click(function() {
-
+    $("#lens1menu").hide();
     if (lens1down == false)
       lens1down = true
     else
@@ -113,6 +122,15 @@ $(document).ready(function() {
           if (lens1down == true)
             changeColor(lens1down, lensList[1], lensList[2])      
       }
+
+    );
+
+    $("#lens1menu").animate({
+          "top": "+=" + changey + "px"}, "fast", function () {  
+          if (lens1down == true)
+            changeColor(lens1down, lensList[1], lensList[2])      
+      }
+
     );
 
     
@@ -120,6 +138,8 @@ $(document).ready(function() {
   });
 
   $("#lens2").click(function() {
+
+    $("#lens2menu").hide();
 
     if (lens2down == false)
       lens2down = true
@@ -146,11 +166,22 @@ $(document).ready(function() {
       }
     );
 
+    $("#lens2menu").animate({
+          "top": "+=" + changey + "px"}, "fast", function () {  
+          if (lens1down == true)
+            changeColor(lens1down, lensList[1], lensList[2])      
+      }
+
+    ); 
+
  
   });
 
 
     $("#lens3").click(function() {
+
+    $("#lens3menu").hide();
+
 
     if (lens3down == false)
       lens3down = true
@@ -175,10 +206,84 @@ $(document).ready(function() {
           if (lens3down == true)
             changeColor(lensList[0], lensList[1], lens3down)        
       }
-    );
+    ); 
 
-   
+    $("#lens3menu").animate({
+          "top": "+=" + changey + "px"}, "fast", function () {  
+          if (lens1down == true)
+            changeColor(lens1down, lensList[1], lensList[2])      
+      }
+
+    ); 
   });
+
+
+    var lens1show = true;
+    var lens2show = true;
+    var lens3show = true;
+    var prismshow = true;
+
+
+    $("#lens1").mouseenter(function() {
+        
+        if (lens1show == true){
+          $("#lens1menu").show();
+          lens1show = false
+        }
+        else{
+          $("#lens1menu").hide();
+          lens1show = true
+        }
+
+    });
+
+
+
+    $("#lens2").mouseenter(function() {
+        
+        if (lens2show == true){
+          $("#lens2menu").show();
+          lens2show = false
+        }
+        else{
+          $("#lens2menu").hide();
+          lens2show = true
+        }
+
+    });
+
+
+    $("#lens3").mouseenter(function() {
+        
+        if (lens3show == true){
+          $("#lens3menu").show();
+          lens3show = false
+        }
+        else{
+          $("#lens3menu").hide();
+          lens3show = true
+        }
+
+    });
+
+
+    $(".prism").mouseenter(function() {
+        
+        if (prismshow == true){
+          $("#prismmenu").show();
+          prismshow = false
+        }
+        else{
+          $("#prismmenu").hide();
+          prismshow = true
+        }
+
+
+
+
+
+    });
+
 
 
 

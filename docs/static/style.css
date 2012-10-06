@@ -96,20 +96,31 @@ span{ display: block; }
   top: 260px;
 }
 
-
-#menu1 {
-  background-color: white;
+#lens1menu {
   position: absolute;
-  width:  23px;
-  height: 71px;
-  left: 100px;
-  top: 150px;
-  border-color: black white black;
-  border-style: solid;
-  border-width: 300px 500px 300px 0px;
+  left: 50px;
+  top: 250px;
 
 }
+#lens2menu {
+  position: absolute;
+  left: 150px;
+  top: 250px;
+}
 
+#lens3menu {
+  position: absolute;
+  left: 250px;
+  top: 250px;
+}
+
+#prismmenu{
+
+  position: absolute;
+  left: 660px;
+  top: 400px;
+
+}
 
 
 
