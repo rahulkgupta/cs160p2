@@ -12,6 +12,7 @@
 <body>
 
 
+
 <!-- style="visibility:hidden;" -->
 
 <div class="beam" id="beam1"></div>
@@ -23,6 +24,9 @@
 <div class="lens" id="lens2"></div>
 <div class="lens" id="lens3"></div>
 
+{% for doc in docs %}
+    <li>{{ doc.name }}</li>
+{% endfor %}
 
 
 
