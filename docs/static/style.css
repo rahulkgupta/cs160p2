@@ -32,6 +32,25 @@ span{ display: block; }
   top: 150px;
 }
 
+
+#lens1_desc {
+  position: absolute;
+  left: 100px;
+  top: 150px;
+
+}
+#lens2_desc {
+  position: absolute;
+  left: 200px;
+  top: 150px;
+}
+
+#lens3_desc {
+  /*background-color: white;*/
+  position: absolute;
+  left: 300px;
+  top: 150px;
+}
 #beam1 {
   background-color: white;
   position: absolute;
@@ -96,6 +115,11 @@ span{ display: block; }
   top: 260px;
 }
 
+.lens_desc
+{
+  width: 20px;
+  background:white;
+}
 
 
 
