@@ -39,6 +39,7 @@ span{ display: block; }
   height: 20px;
   left: 0px;
   top: 900px;
+  opacity:0.90;
 }
 #beam2 {
   background-color: white;
@@ -47,6 +48,7 @@ span{ display: block; }
   height: 20px;
   left: 300px;
   top: 900px;
+  opacity:0.80;
 }
 #beam3 {
   background-color: white;
@@ -55,6 +57,7 @@ span{ display: block; }
   height: 20px;
   left: 600px;
   top: 900px;
+  opacity:0.70;
 }
 #beam4 {
   background-color: white;
@@ -63,6 +66,7 @@ span{ display: block; }
   height: 20px;
   left: 900px;
   top: 900px;
+  opacity:0.6;
 }
 
 
@@ -71,10 +75,14 @@ span{ display: block; }
 .finalLight{
   background-color: white;
   position: absolute;
-  width:  2000px;
-  height: 20px;
+  width:  0;
+  height: 0;
   left: 2930px;
-  top: 900px;
+  top: 105px;
+  opacity:0.4;
+  border-color: black white black;
+  border-style: solid;
+  border-width: 800px 2000px 800px 0px;
 
 }
 
