@@ -2,17 +2,22 @@
 
 
 
+
 $(document).ready(function() {
   
   lensList = [false, false, false]
   white = "FFFFFF"
-  color1 = "00CCFF"
-  color2 = "660066"
-  color3 = "009900"
+  color1 = "0000FF" //1
+  color2 = "FF0000" //2
+  color3 = "33CC33" //3
+  color4 = "800080" //12
+  color5 = "408040" //123
+  color6 = "248F61" //13
+  color7 = "99661A" //23
   
   function toString(color){
     string = "black " + color + " black"
-    console.log(string)
+    // console.log(string)
     return string
   }
 
@@ -20,9 +25,9 @@ $(document).ready(function() {
 
     if ((lens1down==true) && (lens2down == true) && (lens3down == true)){
       ($("#beam2").css("background-color", color1));
-      ($("#beam3").css("background-color", color2));
-      ($("#beam4").css("background-color", color3));
-      ($(".finalLight").css("border-color", toString(color3)));
+      ($("#beam3").css("background-color", color4));
+      ($("#beam4").css("background-color", color5));
+      ($(".finalLight").css("border-color", toString(color5)));
     }
     else if ((lens1down==true) && (lens2down == false) && (lens3down == false)){
       ($("#beam2").css("background-color", color1));
@@ -32,15 +37,15 @@ $(document).ready(function() {
     }
     else if ((lens1down==true) && (lens2down == true) && (lens3down == false)){
       ($("#beam2").css("background-color", color1));
-      ($("#beam3").css("background-color", color2));
-      ($("#beam4").css("background-color", color2));
-      ($(".finalLight").css("border-color", toString(color2)));
+      ($("#beam3").css("background-color", color4));
+      ($("#beam4").css("background-color", color4));
+      ($(".finalLight").css("border-color", toString(color4)));
     }
     else if ((lens1down==true) && (lens2down == false) && (lens3down == true)){
       ($("#beam2").css("background-color", color1));
       ($("#beam3").css("background-color", color1));
-      ($("#beam4").css("background-color", color3));
-      ($(".finalLight").css("border-color", toString(color3)));
+      ($("#beam4").css("background-color", color6));
+      ($(".finalLight").css("border-color", toString(color6)));
     }
     else if ((lens1down==false) && (lens2down == false) && (lens3down == true)){
       ($("#beam2").css("background-color", white));
@@ -57,8 +62,8 @@ $(document).ready(function() {
     else if ((lens1down==false) && (lens2down == true) && (lens3down == true)){
       ($("#beam2").css("background-color", white));
       ($("#beam3").css("background-color", color2));
-      ($("#beam4").css("background-color", color3));
-      ($(".finalLight").css("border-color", toString(color3)));
+      ($("#beam4").css("background-color", color7));
+      ($(".finalLight").css("border-color", toString(color7)));
     }
     else if ((lens1down==false) && (lens2down == false) && (lens3down == false)){
       ($("#beam2").css("background-color", white));
@@ -174,6 +179,36 @@ $(document).ready(function() {
 
    
   });
+
+
+
+  function handleFileSelect(evt) {
+    evt.stopPropagation();
+    evt.preventDefault();
+
+    var files = evt.dataTransfer.files; // FileList object.
+
+    // files is a FileList of File objects. List some properties.
+    var output = [];
+    for (var i = 0, f; f = files[i]; i++) {
+      output.push(escape(f.name),
+                  f.lastModifiedDate ? f.lastModifiedDate.toLocaleDateString() : 'n/a');
+      console.log(output)
+    }
+    //document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
+  }
+
+  function handleDragOver(evt) {
+    evt.stopPropagation();
+    evt.preventDefault();
+    evt.dataTransfer.dropEffect = 'copy'; // Explicitly show this is a copy.
+
+  }
+
+  // Setup the dnd listeners.
+  var dropZone = document.getElementById('drop_zone');
+  dropZone.addEventListener('dragover', handleDragOver, false);
+  dropZone.addEventListener('drop', handleFileSelect, false);
 
 
 
