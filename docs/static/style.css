@@ -5,68 +5,68 @@ span{ display: block; }
 
 
 #lens1 {
-  background-image: url("smalllens.png");
+  background-image: url("lens.png");
   position: absolute;
-  width:  90px;
-  height: 282px;
-  left: 300px;
-  top: 400px;
+  width:  23px;
+  height: 71px;
+  left: 100px;
+  top: 150px;
 
 }
 #lens2 {
-  background-image: url("smalllens.png");
+  background-image: url("lens.png");
   position: absolute;
-  width:  90px;
-  height: 282px;
-  left: 600px;
-  top: 400px;
+  width:  23px;
+  height: 71px;
+  left: 200px;
+  top: 150px;
 }
 
 #lens3 {
   /*background-color: white;*/
-  background-image: url("smalllens.png");
+  background-image: url("lens.png");
   position: absolute;
-  width:  90px;
-  height: 282px;
-  left: 900px;
-  top: 400px;
+  width:  23px;
+  height: 71px;
+  left: 300px;
+  top: 150px;
 }
 
 #beam1 {
   background-color: white;
   position: absolute;
-  width:  300px;
-  height: 20px;
+  width:  100px;
+  height: 5px;
   left: 0px;
-  top: 900px;
-  opacity:0.83;
+  top: 300px;
+  opacity:0.90;
 }
 #beam2 {
   background-color: white;
   position: absolute;
-  width:  300px;
-  height: 20px;
-  left: 300px;
-  top: 900px;
-  opacity:0.83;
+  width:  100px;
+  height: 5px;
+  left: 100px;
+  top: 300px;
+  opacity:0.80;
 }
 #beam3 {
   background-color: white;
   position: absolute;
-  width:  300px;
-  height: 20px;
-  left: 600px;
-  top: 900px;
-  opacity:0.75;
+  width:  100px;
+  height: 5px;
+  left: 200px;
+  top: 300px;
+  opacity:0.70;
 }
 #beam4 {
   background-color: white;
   position: absolute;
-  width:  2000px;
-  height: 20px;
-  left: 900px;
-  top: 900px;
-  opacity:0.65;
+  width:  400px;
+  height: 5px;
+  left: 300px;
+  top: 300px;
+  opacity:0.6;
 }
 
 
@@ -77,12 +77,12 @@ span{ display: block; }
   position: absolute;
   width:  0;
   height: 0;
-  left: 2930px;
-  top: 105px;
+  left: 740px;
+  top: 1px;
   opacity:0.4;
   border-color: black white black;
   border-style: solid;
-  border-width: 800px 2000px 800px 0px;
+  border-width: 300px 500px 300px 0px;
 
 }
 
@@ -90,22 +90,12 @@ span{ display: block; }
   /*background-color: white;*/
   background-image: url("prism.png");
   position: absolute;
-  width:  494px;
-  height: 344px;
-  left: 2600px;
-  top: 735px;
+  width:  124px;
+  height: 86px;
+  left: 660px;
+  top: 260px;
 }
 
-.shimmer{
-
-background-image: -moz-linear-gradient(160deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 25%, rgba(255,255,255,0.85) 60%, rgba(255,255,255,0) 100%); /* FF3.6+ */
-background-image: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(25%,rgba(255,255,255,0)), color-stop(60%,rgba(255,255,255,0.85)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
-background-image: -webkit-linear-gradient(160deg, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 25%,rgba(255,255,255,0.85) 60%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
-background-image: -o-linear-gradient(160deg, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 25%,rgba(255,255,255,0.85) 60%,rgba(255,255,255,0) 100%); /* Opera11.10+ */
-background-image: -ms-linear-gradient(160deg, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 25%,rgba(255,255,255,0.85) 60%,rgba(255,255,255,0) 100%); /* IE10+ */
-background-image: linear-gradient(160deg, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 25%,rgba(255,255,255,0.85) 60%,rgba(255,255,255,0) 100%); /* W3C */
-
-}
 
 
 

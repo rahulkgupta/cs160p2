@@ -12,8 +12,8 @@ $(document).ready(function() {
   
   function toString(color){
     string = "black " + color + " black"
-    // console.log(string)
-    // return string
+    console.log(string)
+    return string
   }
 
   function changeColor(lens1down, lens2down, lens3down){
