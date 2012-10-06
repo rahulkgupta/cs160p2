@@ -1,0 +1,93 @@
+/*Style.css*/
+
+body{ color: #000000; background: #000000; }
+span{ display: block; }
+
+
+#lens1 {
+  background-image: url("lens.png");
+  position: absolute;
+  width:  90px;
+  height: 282px;
+  left: 300px;
+  top: 400px;
+
+}
+#lens2 {
+  background-image: url("lens.png");
+  position: absolute;
+  width:  90px;
+  height: 282px;
+  left: 600px;
+  top: 400px;
+}
+
+#lens3 {
+  /*background-color: white;*/
+  background-image: url("lens.png");
+  position: absolute;
+  width:  90px;
+  height: 282px;
+  left: 900px;
+  top: 400px;
+}
+
+#beam1 {
+  background-color: white;
+  position: absolute;
+  width:  300px;
+  height: 20px;
+  left: 0px;
+  top: 900px;
+}
+#beam2 {
+  background-color: white;
+  position: absolute;
+  width:  300px;
+  height: 20px;
+  left: 300px;
+  top: 900px;
+}
+#beam3 {
+  background-color: white;
+  position: absolute;
+  width:  300px;
+  height: 20px;
+  left: 600px;
+  top: 900px;
+}
+#beam4 {
+  background-color: white;
+  position: absolute;
+  width:  2000px;
+  height: 20px;
+  left: 900px;
+  top: 900px;
+}
+
+
+
+
+.finalLight{
+  background-color: white;
+  position: absolute;
+  width:  2000px;
+  height: 20px;
+  left: 2930px;
+  top: 900px;
+
+}
+
+.prism {
+  /*background-color: white;*/
+  background-image: url("prism.png");
+  position: absolute;
+  width:  494px;
+  height: 344px;
+  left: 2600px;
+  top: 735px;
+}
+
+
+
+
