@@ -2,17 +2,31 @@
 
 
 
+
+
+
 $(document).ready(function() {
   
   lensList = [false, false, false]
   white = "FFFFFF"
-  color1 = "00CCFF"
-  color2 = "660066"
-  color3 = "009900"
-  
+  color1 = "0000FF" //1
+  color2 = "FF0000" //2
+  color3 = "33CC33" //3
+  color4 = "800080" //12
+  color5 = "408040" //123
+  color6 = "248F61" //13
+  color7 = "99661A" //23
+  $("#lens1menu").hide();
+  $("#lens2menu").hide();
+  $("#lens3menu").hide();
+  $("#prismmenu").hide();
+
+
+
+
   function toString(color){
     string = "black " + color + " black"
-    console.log(string)
+    // console.log(string)
     return string
   }
 
@@ -20,9 +34,9 @@ $(document).ready(function() {
 
     if ((lens1down==true) && (lens2down == true) && (lens3down == true)){
       ($("#beam2").css("background-color", color1));
-      ($("#beam3").css("background-color", color2));
-      ($("#beam4").css("background-color", color3));
-      ($(".finalLight").css("border-color", toString(color3)));
+      ($("#beam3").css("background-color", color4));
+      ($("#beam4").css("background-color", color5));
+      ($(".finalLight").css("border-color", toString(color5)));
     }
     else if ((lens1down==true) && (lens2down == false) && (lens3down == false)){
       ($("#beam2").css("background-color", color1));
@@ -32,15 +46,15 @@ $(document).ready(function() {
     }
     else if ((lens1down==true) && (lens2down == true) && (lens3down == false)){
       ($("#beam2").css("background-color", color1));
-      ($("#beam3").css("background-color", color2));
-      ($("#beam4").css("background-color", color2));
-      ($(".finalLight").css("border-color", toString(color2)));
+      ($("#beam3").css("background-color", color4));
+      ($("#beam4").css("background-color", color4));
+      ($(".finalLight").css("border-color", toString(color4)));
     }
     else if ((lens1down==true) && (lens2down == false) && (lens3down == true)){
       ($("#beam2").css("background-color", color1));
       ($("#beam3").css("background-color", color1));
-      ($("#beam4").css("background-color", color3));
-      ($(".finalLight").css("border-color", toString(color3)));
+      ($("#beam4").css("background-color", color6));
+      ($(".finalLight").css("border-color", toString(color6)));
     }
     else if ((lens1down==false) && (lens2down == false) && (lens3down == true)){
       ($("#beam2").css("background-color", white));
@@ -57,8 +71,8 @@ $(document).ready(function() {
     else if ((lens1down==false) && (lens2down == true) && (lens3down == true)){
       ($("#beam2").css("background-color", white));
       ($("#beam3").css("background-color", color2));
-      ($("#beam4").css("background-color", color3));
-      ($(".finalLight").css("border-color", toString(color3)));
+      ($("#beam4").css("background-color", color7));
+      ($(".finalLight").css("border-color", toString(color7)));
     }
     else if ((lens1down==false) && (lens2down == false) && (lens3down == false)){
       ($("#beam2").css("background-color", white));
@@ -82,7 +96,7 @@ $(document).ready(function() {
 
 
   $("#lens1").click(function() {
-
+    $("#lens1menu").hide();
     if (lens1down == false)
       lens1down = true
     else
@@ -108,6 +122,15 @@ $(document).ready(function() {
           if (lens1down == true)
             changeColor(lens1down, lensList[1], lensList[2])      
       }
+
+    );
+
+    $("#lens1menu").animate({
+          "top": "+=" + changey + "px"}, "fast", function () {  
+          if (lens1down == true)
+            changeColor(lens1down, lensList[1], lensList[2])      
+      }
+
     );
 
     
@@ -115,6 +138,8 @@ $(document).ready(function() {
   });
 
   $("#lens2").click(function() {
+
+    $("#lens2menu").hide();
 
     if (lens2down == false)
       lens2down = true
@@ -141,11 +166,22 @@ $(document).ready(function() {
       }
     );
 
+    $("#lens2menu").animate({
+          "top": "+=" + changey + "px"}, "fast", function () {  
+          if (lens1down == true)
+            changeColor(lens1down, lensList[1], lensList[2])      
+      }
+
+    ); 
+
  
   });
 
 
     $("#lens3").click(function() {
+
+    $("#lens3menu").hide();
+
 
     if (lens3down == false)
       lens3down = true
@@ -170,10 +206,114 @@ $(document).ready(function() {
           if (lens3down == true)
             changeColor(lensList[0], lensList[1], lens3down)        
       }
-    );
+    ); 
 
-   
+    $("#lens3menu").animate({
+          "top": "+=" + changey + "px"}, "fast", function () {  
+          if (lens1down == true)
+            changeColor(lens1down, lensList[1], lensList[2])      
+      }
+
+    ); 
   });
+
+
+    var lens1show = true;
+    var lens2show = true;
+    var lens3show = true;
+    var prismshow = true;
+
+
+    $("#lens1").mouseenter(function() {
+        
+        if (lens1show == true){
+          $("#lens1menu").show();
+          lens1show = false
+        }
+        else{
+          $("#lens1menu").hide();
+          lens1show = true
+        }
+
+    });
+
+
+
+    $("#lens2").mouseenter(function() {
+        
+        if (lens2show == true){
+          $("#lens2menu").show();
+          lens2show = false
+        }
+        else{
+          $("#lens2menu").hide();
+          lens2show = true
+        }
+
+    });
+
+
+    $("#lens3").mouseenter(function() {
+        
+        if (lens3show == true){
+          $("#lens3menu").show();
+          lens3show = false
+        }
+        else{
+          $("#lens3menu").hide();
+          lens3show = true
+        }
+
+    });
+
+
+    $(".prism").mouseenter(function() {
+        
+        if (prismshow == true){
+          $("#prismmenu").show();
+          prismshow = false
+        }
+        else{
+          $("#prismmenu").hide();
+          prismshow = true
+        }
+
+
+
+
+
+    });
+
+
+
+
+  function handleFileSelect(evt) {
+    evt.stopPropagation();
+    evt.preventDefault();
+
+    var files = evt.dataTransfer.files; // FileList object.
+
+    // files is a FileList of File objects. List some properties.
+    var output = [];
+    for (var i = 0, f; f = files[i]; i++) {
+      output.push(escape(f.name),
+                  f.lastModifiedDate ? f.lastModifiedDate.toLocaleDateString() : 'n/a');
+      console.log(output)
+    }
+    //document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
+  }
+
+  function handleDragOver(evt) {
+    evt.stopPropagation();
+    evt.preventDefault();
+    evt.dataTransfer.dropEffect = 'copy'; // Explicitly show this is a copy.
+
+  }
+
+  // Setup the dnd listeners.
+  var dropZone = document.getElementById('drop_zone');
+  dropZone.addEventListener('dragover', handleDragOver, false);
+  dropZone.addEventListener('drop', handleFileSelect, false);
 
 
 
