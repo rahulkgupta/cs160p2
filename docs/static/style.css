@@ -97,7 +97,10 @@ span{ display: block; }
 }
 
 
-
+.beam
+{
+  border: 0px;
+}
 
 .finalLight{
   position: absolute;
