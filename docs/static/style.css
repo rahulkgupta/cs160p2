@@ -32,6 +32,33 @@ span{ display: block; }
   top: 150px;
 }
 
+#lens1:hover + #lens1_desc {
+  display:block;
+}
+
+#lens2:hover + #lens2_desc {
+  display:block;
+}
+
+#lens3:hover + #lens3_desc {
+  display:block;
+}
+
+#lens1_desc {
+  position: absolute;
+  left: 110px;
+
+}
+#lens2_desc {
+  position: absolute;
+  left: 210px;
+}
+
+#lens3_desc {
+  /*background-color: white;*/
+  position: absolute;
+  left: 310px;
+}
 #beam1 {
   background-color: white;
   position: absolute;
@@ -94,6 +121,14 @@ span{ display: block; }
   height: 86px;
   left: 660px;
   top: 260px;
+}
+
+.lens_desc
+{
+  width: 100px;
+  background:white;
+  display: none;
+  top:190px;
 }
 
 
