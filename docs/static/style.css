@@ -86,6 +86,16 @@ span{ display: block; }
   top: 300px;
   opacity:0.70;
 }
+
+#docs_list
+{
+  position: absolute;
+  left: 900px;
+  top: 190px;
+  width: 200px;
+  height: 30px;
+  background-color: white;
+}
 #beam4 {
   background-color: white;
   position: absolute;
