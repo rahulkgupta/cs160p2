@@ -9,5 +9,6 @@ from django.utils import simplejson
 
 def home(request):
     docs = Doc.objects.all()
-    js_data = simplejson.dumps(list(docs))
+    doclist = list(docs)
+    js_data = simplejson.dumps(doclist)
     return render_to_response('index.html', {'docs':docs, 'jsdocs': js_data},context_instance=RequestContext(request))
