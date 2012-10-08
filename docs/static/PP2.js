@@ -36,49 +36,49 @@ $(document).ready(function() {
       ($("#beam2").css("background-color", color1));
       ($("#beam3").css("background-color", color4));
       ($("#beam4").css("background-color", color5));
-      ($(".finalLight").css("border-color", toString(color5)));
+      ($("grad2").css("stop-color", toString(color5)));
     }
     else if ((lens1down==true) && (lens2down == false) && (lens3down == false)){
       ($("#beam2").css("background-color", color1));
       ($("#beam3").css("background-color", color1));
       ($("#beam4").css("background-color", color1));
-      ($(".finalLight").css("border-color", toString(color1)));
+      ($("grad2").css("stop-color", toString(color1)));
     }
     else if ((lens1down==true) && (lens2down == true) && (lens3down == false)){
       ($("#beam2").css("background-color", color1));
       ($("#beam3").css("background-color", color4));
       ($("#beam4").css("background-color", color4));
-      ($(".finalLight").css("border-color", toString(color4)));
+      ($("grad2").css("stop-color", toString(color4)));
     }
     else if ((lens1down==true) && (lens2down == false) && (lens3down == true)){
       ($("#beam2").css("background-color", color1));
       ($("#beam3").css("background-color", color1));
       ($("#beam4").css("background-color", color6));
-      ($(".finalLight").css("border-color", toString(color6)));
+      ($("grad2").css("stop-color", toString(color6)));
     }
     else if ((lens1down==false) && (lens2down == false) && (lens3down == true)){
       ($("#beam2").css("background-color", white));
       ($("#beam3").css("background-color", white));
       ($("#beam4").css("background-color", color3));
-      ($(".finalLight").css("border-color", toString(color3)));
+      ($("grad2").css("stop-color", toString(color3)));
     }
     else if ((lens1down==false) && (lens2down == true) && (lens3down == false)){
        ($("#beam2").css("background-color", white));
        ($("#beam3").css("background-color", color2));
        ($("#beam4").css("background-color", color2));
-       ($(".finalLight").css("border-color", toString(color2)));
+       ($("grad2").css("stop-color", toString(color2)));
     }
     else if ((lens1down==false) && (lens2down == true) && (lens3down == true)){
       ($("#beam2").css("background-color", white));
       ($("#beam3").css("background-color", color2));
       ($("#beam4").css("background-color", color7));
-      ($(".finalLight").css("border-color", toString(color7)));
+      ($("grad2").css("stop-color", toString(color7)));
     }
     else if ((lens1down==false) && (lens2down == false) && (lens3down == false)){
       ($("#beam2").css("background-color", white));
       ($("#beam3").css("background-color", white));
       ($("#beam4").css("background-color", white));
-      ($(".finalLight").css("border-color", toString(white)));
+      ($("grad2").css("stop-color", toString(white)));
     }
 
     lensList[0] = lens1down

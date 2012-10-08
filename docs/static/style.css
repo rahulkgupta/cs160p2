@@ -101,12 +101,10 @@ span{ display: block; }
 
 .finalLight{
   position: absolute;
-  width:  0;
-  height: 0;
-  left: 740px;
-  top: 1px;
-  
-
+  width: 500;
+  height: 275;
+  left: 690px;
+  top: 150px;
 }
 
 .prism {
