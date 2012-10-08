@@ -78,7 +78,7 @@ $(document).ready(function() {
       ($("#beam2").css("background-color", white));
       ($("#beam3").css("background-color", white));
       ($("#beam4").css("background-color", white));
-      $("#grad2").css("stop-color", black)
+      $("#grad2").css("stop-color", "black")
     }
 
     lensList[0] = lens1down
