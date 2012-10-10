@@ -14,10 +14,10 @@ DATETIME_FORMAT = '%Y-%m-%d %H:%M:%S'
 def home(request):
     docs = Doc.objects.all()
     temp_output = serializers.serialize('python', docs)
-    # output = json.dumps(temp_output, cls=DjangoJSONEncoder)
-    json_serializer = serializers.get_serializer("json")()
+    output = json.dumps(temp_output, cls=DjangoJSONEncoder)
+    # json_serializer = serializers.get_serializer("json")()
     
-    output = json_serializer.serialize(docs, ensure_ascii=False, stream=response)
+    # output = json_serializer.serialize(docs, ensure_ascii=False)
 
     # for doc in docs:
     #     doc.date = datetime.strftime(docs['date'], DATETIME_FORMAT)
