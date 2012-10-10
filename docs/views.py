@@ -7,10 +7,10 @@ from django.utils import simplejson
 
 
 def home(request):
-    docs = Doc.objects.all().values()
+    docs = list(Doc.objects.all().values())
 
     for doc in docs:
         doc.date = unicode(docs.date)
 
-    js_data = simplejson.dumps(list(docs))
+    js_data = simplejson.dumps(docs)
     return render_to_response('index.html', {'docs':docs, 'jsdocs': js_data},context_instance=RequestContext(request))
