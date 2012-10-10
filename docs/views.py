@@ -11,7 +11,7 @@ from django.core.serializers.json import DjangoJSONEncoder
 DATETIME_FORMAT = '%Y-%m-%d %H:%M:%S'
 
 def home(request):
-    docs = Doc.objects.all().values()
+    docs = Doc.objects.all()
     temp_output = serializers.serialize('python', docs)
     output = json.dumps(temp_output, cls=DjangoJSONEncoder)
 
