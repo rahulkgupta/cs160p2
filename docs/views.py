@@ -5,6 +5,7 @@ from django.template import RequestContext
 from docs.models import Doc
 from datetime import datetime
 from django.core import serializers
+from djanco.core.serializers import json
 from django.core.serializers.json import DjangoJSONEncoder 
 
 
