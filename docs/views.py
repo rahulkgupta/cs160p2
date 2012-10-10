@@ -18,4 +18,4 @@ def home(request):
     # for doc in docs:
     #     doc.date = datetime.strftime(docs['date'], DATETIME_FORMAT)
 
-    return render_to_response('index.html', {'docs':docs, 'jsdocs': data},context_instance=RequestContext(request))
+    return render_to_response('index.html', {'docs':docs, 'jsdocs': outputs},context_instance=RequestContext(request))
