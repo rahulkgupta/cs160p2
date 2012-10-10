@@ -8,5 +8,5 @@ from django.core import serializers
 
 def home(request):
     docs = Doc.objects.all()
-    js_data = serializers.serialize("json", docs)
+    js_data = serializers.serialize("json", list(docs))
     return render_to_response('index.html', {'docs':docs, 'jsdocs': js_data},context_instance=RequestContext(request))
