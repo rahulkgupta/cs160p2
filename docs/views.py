@@ -14,12 +14,6 @@ DATETIME_FORMAT = '%Y-%m-%d %H:%M:%S'
 def home(request):
     docs = Doc.objects.all()
     temp_output = serializers.serialize('python', docs)
-    output = json.dumps(temp_output, cls=DjangoJSONEncoder)
-    # json_serializer = serializers.get_serializer("json")()
-    
-    # output = json_serializer.serialize(docs, ensure_ascii=False)
-
-    # for doc in docs:
-    #     doc.date = datetime.strftime(docs['date'], DATETIME_FORMAT)
+    output = json.dumps(temp_output, cls=DjangoJSONEncoder) # THIS WORKS finally. I think the safe thing was crucial
 
     return render_to_response('index.html', {'docs':docs, 'jsdocs': output},context_instance=RequestContext(request))
