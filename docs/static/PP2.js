@@ -37,6 +37,7 @@ $(document).ready(function() {
       ($("#beam3").css("background-color", color4));
       ($("#beam4").css("background-color", color5));
       $("#grad2").css("stop-color", color5);
+      filter(true, true, true)
     }
     else if ((lens1down==true) && (lens2down == false) && (lens3down == false)){
       ($("#beam2").css("background-color", color1));
@@ -50,36 +51,42 @@ $(document).ready(function() {
       ($("#beam3").css("background-color", color4));
       ($("#beam4").css("background-color", color4));
       $("#grad2").css("stop-color", color4);
+      filter(true, true, false)
     }
     else if ((lens1down==true) && (lens2down == false) && (lens3down == true)){
       ($("#beam2").css("background-color", color1));
       ($("#beam3").css("background-color", color1));
       ($("#beam4").css("background-color", color6));
       $("#grad2").css("stop-color", color6);
+      filter(true, false, true)
     }
     else if ((lens1down==false) && (lens2down == false) && (lens3down == true)){
       ($("#beam2").css("background-color", white));
       ($("#beam3").css("background-color", white));
       ($("#beam4").css("background-color", color3));
       $("#grad2").css("stop-color", color3);
+      filter(false, false, true)
     }
     else if ((lens1down==false) && (lens2down == true) && (lens3down == false)){
        ($("#beam2").css("background-color", white));
        ($("#beam3").css("background-color", color2));
        ($("#beam4").css("background-color", color2));
        $("#grad2").css("stop-color", color2);
+       filter(true, true, false)
     }
     else if ((lens1down==false) && (lens2down == true) && (lens3down == true)){
       ($("#beam2").css("background-color", white));
       ($("#beam3").css("background-color", color2));
       ($("#beam4").css("background-color", color7));
       $("#grad2").css("stop-color", color7);
+      filter(false, true, true)
     }
     else if ((lens1down==false) && (lens2down == false) && (lens3down == false)){
       ($("#beam2").css("background-color", white));
       ($("#beam3").css("background-color", white));
       ($("#beam4").css("background-color", white));
       $("#grad2").css("stop-color", "black")
+      filter(false, false, false)
     }
 
     lensList[0] = lens1down
