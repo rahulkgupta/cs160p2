@@ -46,18 +46,18 @@ span{ display: block; }
 
 #lens1_desc {
   position: absolute;
-  left: 110px;
+  left: 20px;
 
 }
 #lens2_desc {
   position: absolute;
-  left: 210px;
+  left: 20px;
 }
 
 #lens3_desc {
   /*background-color: white;*/
   position: absolute;
-  left: 310px;
+  left: 20px;
 }
 #beam1 {
   background-color: white;
