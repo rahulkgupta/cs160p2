@@ -315,6 +315,7 @@ $(document).ready(function() {
   dropZone.addEventListener('dragover', handleDragOver, false);
   dropZone.addEventListener('drop', handleFileSelect, false);
 
+  var showmenu = false
 
   $(".prism").hover(
     function (e) {
@@ -323,9 +324,19 @@ $(document).ready(function() {
       $("#prism_menu").css("top", e.clientY)
     },
     function (e) {
-      $("#prism_menu").css("display", "none")
+      if (!showmenu) {
+        $("#prism_menu").css("display", "none")
+      }
     }
   )
 
+  $("#prism_menu").hover(
+    function (e) {
+      showmenu = true
+    },
+    function (e) {
+      showmenu = false
+    }
+  )
 
 })
