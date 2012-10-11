@@ -43,6 +43,7 @@ $(document).ready(function() {
       ($("#beam3").css("background-color", color1));
       ($("#beam4").css("background-color", color1));
       $("#grad2").css("stop-color", color1);
+      filter(true, false, false)
     }
     else if ((lens1down==true) && (lens2down == true) && (lens3down == false)){
       ($("#beam2").css("background-color", color1));
@@ -86,6 +87,19 @@ $(document).ready(function() {
     lensList[2] = lens3down  
   }
 
+  function filter(l1, l2, l3) {
+    var updateddocs = []
+
+    for (var i in docs) {
+      if (docs[i].fields.java || docs[i].fields.java == l1
+          && docs[i].fields.design || docs[i].fields.design == l1
+          && docs[i].fields.math || docs[i].fields.math == l1) {
+        updateddocs.add(docs[i])
+      } 
+    }
+
+    console.log(updateddocs)
+  }
 
   var lens1y = parseInt($("#lens1").css("top"),10)
   var lens2y = parseInt($("#lens2").css("top"),10)
