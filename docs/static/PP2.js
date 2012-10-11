@@ -94,7 +94,7 @@ $(document).ready(function() {
       if (docs[i].fields.java || docs[i].fields.java == l1
           && docs[i].fields.design || docs[i].fields.design == l1
           && docs[i].fields.math || docs[i].fields.math == l1) {
-        updateddocs.add(docs[i])
+        updateddocs.push(docs[i])
       } 
     }
 
