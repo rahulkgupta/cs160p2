@@ -156,14 +156,14 @@ span{ display: block; }
 
 #prism_menu{
   position: absolute;
-  display: none;
+  visibility: none;
   background-color: white;
   top:40px;
 }
 
-.prism > #prism_menu
+.prism:hover > #prism_menu
 {
-  display:block;
+  visibility:visible;
 }
 
 
