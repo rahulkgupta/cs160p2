@@ -155,10 +155,15 @@ span{ display: block; }
 }
 
 #prism_menu{
-
   position: absolute;
   display: none;
+  background-color: white;
+  top:40px;
+}
 
+.prism > #prism_menu
+{
+  display:block;
 }
 
 

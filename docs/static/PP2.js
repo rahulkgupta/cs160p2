@@ -317,25 +317,30 @@ $(document).ready(function() {
 
   var showmenu = false
 
-  $(".prism").hover(
+  // $(".prism").hover(
+  //   function (e) {
+  //     $("#prism_menu").css("display", "block")
+  //     $("#prism_menu").css("left", e.clientX)
+  //     $("#prism_menu").css("top", e.clientY)
+  //   },
+  //   function (e) {
+  //     if (!showmenu) {
+  //       $("#prism_menu").css("display", "none")
+  //     }
+  //   }
+  // )
+
+  $(".prism").mouseenter(
     function (e) {
       $("#prism_menu").css("display", "block")
       $("#prism_menu").css("left", e.clientX)
       $("#prism_menu").css("top", e.clientY)
-    },
-    function (e) {
-      if (!showmenu) {
-        $("#prism_menu").css("display", "none")
-      }
     }
   )
 
-  $("#prism_menu").hover(
+  $(".prism").mouseleave(
     function (e) {
-      showmenu = true
-    },
-    function (e) {
-      showmenu = false
+      $("#prism_menu").css("display", "none")
     }
   )
 
