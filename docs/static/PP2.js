@@ -316,8 +316,16 @@ $(document).ready(function() {
   dropZone.addEventListener('drop', handleFileSelect, false);
 
 
-
-
+  $(".prism").hover(
+    function (e) {
+      $("#prism_menu").css("display", "block")
+      $("#prism_menu").css("left", e.clientX)
+      $("#prism_menu").css("top", e.clientY)
+    },
+    function (e) {
+      $("#prism_menu").css("display", "none")
+    }
+  )
 
 
 })

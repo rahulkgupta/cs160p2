@@ -154,13 +154,14 @@ span{ display: block; }
   top: 250px;
 }
 
-#prismmenu{
+#prism_menu{
 
   position: absolute;
-  left: 660px;
-  top: 400px;
+  display: none;
 
 }
+
+
 
 
 
