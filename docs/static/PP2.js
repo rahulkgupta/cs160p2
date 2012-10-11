@@ -98,10 +98,10 @@ $(document).ready(function() {
     var updateddocs = []
     console.log(l1, l2, l3)
     for (var i in docs) {
-      if (docs[i].fields.java || docs[i].fields.java == l1
-          && docs[i].fields.design || docs[i].fields.design == l2
-          && docs[i].fields.math || docs[i].fields.math == l3) {
-        console.log(docs[i].fields)
+      if ((docs[i].fields.java || docs[i].fields.java == l1)
+          && (docs[i].fields.design || docs[i].fields.design == l2)
+          && (docs[i].fields.math || docs[i].fields.math == l3)) {
+        console.log(docs[i].fields )
         updateddocs.push(docs[i])
       } 
     }
