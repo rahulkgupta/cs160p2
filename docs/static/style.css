@@ -156,7 +156,7 @@ span{ display: block; }
 
 #prism_menu{
   position: absolute;
-  visibility: none;
+  visibility: hidden;
   background-color: white;
   top:40px;
 }

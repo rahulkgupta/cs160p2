@@ -330,18 +330,4 @@ $(document).ready(function() {
   //   }
   // )
 
-  $(".prism").mouseenter(
-    function (e) {
-      $("#prism_menu").css("display", "block")
-      $("#prism_menu").css("left", e.clientX)
-      $("#prism_menu").css("top", e.clientY)
-    }
-  )
-
-  $(".prism").mouseleave(
-    function (e) {
-      $("#prism_menu").css("display", "none")
-    }
-  )
-
 })
