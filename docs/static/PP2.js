@@ -99,8 +99,8 @@ $(document).ready(function() {
 
     for (var i in docs) {
       if (docs[i].fields.java || docs[i].fields.java == l1
-          && docs[i].fields.design || docs[i].fields.design == l1
-          && docs[i].fields.math || docs[i].fields.math == l1) {
+          && docs[i].fields.design || docs[i].fields.design == l2
+          && docs[i].fields.math || docs[i].fields.math == l3) {
         updateddocs.push(docs[i])
       } 
     }
@@ -239,71 +239,13 @@ $(document).ready(function() {
   });
 
 
-    var lens1show = true;
-    var lens2show = true;
-    var lens3show = true;
-    var prismshow = true;
 
-
-    $("#lens1").mouseenter(function() {
-        
-        if (lens1show == true){
-          $("#lens1menu").show();
-          lens1show = false
-        }
-        else{
-          $("#lens1menu").hide();
-          lens1show = true
-        }
-
-    });
-
-
-
-    $("#lens2").mouseenter(function() {
-        
-        if (lens2show == true){
-          $("#lens2menu").show();
-          lens2show = false
-        }
-        else{
-          $("#lens2menu").hide();
-          lens2show = true
-        }
-
-    });
-
-
-    $("#lens3").mouseenter(function() {
-        
-        if (lens3show == true){
-          $("#lens3menu").show();
-          lens3show = false
-        }
-        else{
-          $("#lens3menu").hide();
-          lens3show = true
-        }
-
-    });
-
-
-    $(".prism").mouseenter(function() {
-        
-        if (prismshow == true){
-          $("#prismmenu").show();
-          prismshow = false
-        }
-        else{
-          $("#prismmenu").hide();
-          prismshow = true
-        }
+  
 
 
 
 
 
-    });
 
 
 
