@@ -95,7 +95,7 @@ $(document).ready(function() {
   }
 
   function filter(l1, l2, l3) {
-    
+    updateddocs = []
     for (var i in docs) {
       if ((docs[i].fields.java || docs[i].fields.java == l1)
           && (docs[i].fields.design || docs[i].fields.design == l2)
@@ -103,7 +103,7 @@ $(document).ready(function() {
         updateddocs.push(docs[i])
       } 
     }
-
+    //need to put in an ordering component
     replaceDocs(updateddocs)
     
   }
@@ -116,133 +116,134 @@ $(document).ready(function() {
   var lens3down = false;
 
 
-  $("#lens1").click(function() {
-    $("#lens1menu").hide();
-    if (lens1down == false)
-      lens1down = true
-    else
-      lens1down = false
+  // $("#lens1").click(function() {
+  //   $("#lens1menu").hide();
+  //   if (lens1down == false)
+  //     lens1down = true
+  //   else
+  //     lens1down = false
     
 
-    var left = parseInt($(this).css("left"),10)
-    var top = parseInt($(this).css("top"), 10)
-    var height = parseInt($(this).css("height"), 10)
-    var distop = parseInt($("#beam1").css("top"), 10)
+  //   var left = parseInt($(this).css("left"),10)
+  //   var top = parseInt($(this).css("top"), 10)
+  //   var height = parseInt($(this).css("height"), 10)
+  //   var distop = parseInt($("#beam1").css("top"), 10)
 
-    if (top == lens1y){
-      var changey = (distop - top) - 0.5 * height
-    }
-    else{
-      changey = lens1y - top
-      changeColor(lens1down, lensList[1], lensList[2])      
+  //   if (top == lens1y){
+  //     var changey = (distop - top) - 0.5 * height
+  //   }
+  //   else{
+  //     changey = lens1y - top
+  //     changeColor(lens1down, lensList[1], lensList[2])      
 
-    }
-    var self = this;
-    $(self).animate({
-          "top": "+=" + changey + "px"}, "fast", function () {  
-          if (lens1down == true)
-            changeColor(lens1down, lensList[1], lensList[2])      
-      }
+  //   }
+  //   var self = this;
+  //   $(self).animate({
+  //         "top": "+=" + changey + "px"}, "fast", function () {  
+  //         if (lens1down == true)
+  //           changeColor(lens1down, lensList[1], lensList[2])      
+  //     }
 
-    );
+  //   );
 
-    $("#lens1menu").animate({
-          "top": "+=" + changey + "px"}, "fast", function () {  
-          if (lens1down == true)
-            changeColor(lens1down, lensList[1], lensList[2])      
-      }
+  //   $("#lens1menu").animate({
+  //         "top": "+=" + changey + "px"}, "fast", function () {  
+  //         if (lens1down == true)
+  //           changeColor(lens1down, lensList[1], lensList[2])      
+  //     }
 
-    );
+  //   );
 
     
 
-  });
+  // });
 
-  $("#lens2").click(function() {
+  // $("#lens2").click(function() {
 
-    $("#lens2menu").hide();
+  //   $("#lens2menu").hide();
 
-    if (lens2down == false)
-      lens2down = true
-    else
-      lens2down = false
+  //   if (lens2down == false)
+  //     lens2down = true
+  //   else
+  //     lens2down = false
 
-    var left = parseInt($(this).css("left"),10)
-    var top = parseInt($(this).css("top"), 10)
-    var height = parseInt($(this).css("height"), 10)
-    var distop = parseInt($("#beam2").css("top"), 10)
+  //   var left = parseInt($(this).css("left"),10)
+  //   var top = parseInt($(this).css("top"), 10)
+  //   var height = parseInt($(this).css("height"), 10)
+  //   var distop = parseInt($("#beam2").css("top"), 10)
 
-    if (top == lens2y){
-      var changey = (distop - top) - 0.5 * height
-    }
-    else{
-      changey = lens2y - top
-      changeColor(lensList[0], lens2down, lensList[2])    
-    }
-    var self = this;
-    $(self).animate({
-          "top": "+=" + changey + "px"}, "fast", function () {
-          if (lens2down == true)
-            changeColor(lensList[0], lens2down, lensList[2])        
-      }
-    );
+  //   if (top == lens2y){
+  //     var changey = (distop - top) - 0.5 * height
+  //   }
+  //   else{
+  //     changey = lens2y - top
+  //     changeColor(lensList[0], lens2down, lensList[2])    
+  //   }
+  //   var self = this;
+  //   $(self).animate({
+  //         "top": "+=" + changey + "px"}, "fast", function () {
+  //         if (lens2down == true)
+  //           changeColor(lensList[0], lens2down, lensList[2])        
+  //     }
+  //   );
 
-    $("#lens2menu").animate({
-          "top": "+=" + changey + "px"}, "fast", function () {  
-          if (lens1down == true)
-            changeColor(lens1down, lensList[1], lensList[2])      
-      }
+  //   $("#lens2menu").animate({
+  //         "top": "+=" + changey + "px"}, "fast", function () {  
+  //         if (lens1down == true)
+  //           changeColor(lens1down, lensList[1], lensList[2])      
+  //     }
 
-    ); 
+  //   ); 
 
  
-  });
+  // });
 
 
-    $("#lens3").click(function() {
+  //   $("#lens3").click(function() {
 
-    $("#lens3menu").hide();
+  //   $("#lens3menu").hide();
 
 
-    if (lens3down == false)
-      lens3down = true
-    else
-      lens3down = false
+  //   if (lens3down == false)
+  //     lens3down = true
+  //   else
+  //     lens3down = false
 
-    var left = parseInt($(this).css("left"),10)
-    var top = parseInt($(this).css("top"), 10)
-    var height = parseInt($(this).css("height"), 10)
-    var distop = parseInt($("#beam3").css("top"), 10)
+  //   var left = parseInt($(this).css("left"),10)
+  //   var top = parseInt($(this).css("top"), 10)
+  //   var height = parseInt($(this).css("height"), 10)
+  //   var distop = parseInt($("#beam3").css("top"), 10)
 
-    if (top == lens3y){
-      var changey = (distop - top) - 0.5 * height
-    }
-    else{
-      changey = lens3y - top
-      changeColor(lensList[0], lensList[1], lens3down) 
-    }
-    var self = this;
-    $(self).animate({
-          "top": "+=" + changey + "px"}, "fast", function () {
-          if (lens3down == true)
-            changeColor(lensList[0], lensList[1], lens3down)        
-      }
-    ); 
+  //   if (top == lens3y){
+  //     var changey = (distop - top) - 0.5 * height
+  //   }
+  //   else{
+  //     changey = lens3y - top
+  //     changeColor(lensList[0], lensList[1], lens3down) 
+  //   }
+  //   var self = this;
+  //   $(self).animate({
+  //         "top": "+=" + changey + "px"}, "fast", function () {
+  //         if (lens3down == true)
+  //           changeColor(lensList[0], lensList[1], lens3down)        
+  //     }
+  //   ); 
 
-    $("#lens3menu").animate({
-          "top": "+=" + changey + "px"}, "fast", function () {  
-          if (lens1down == true)
-            changeColor(lens1down, lensList[1], lensList[2])      
-      }
+  //   $("#lens3menu").animate({
+  //         "top": "+=" + changey + "px"}, "fast", function () {  
+  //         if (lens1down == true)
+  //           changeColor(lens1down, lensList[1], lensList[2])      
+  //     }
 
-    ); 
-  });
+  //   ); 
+  // });
 
   $("#name_sort").click(function () {
       updateddocs.sort(function (a,b) {
         console.log(a.fields.name - b.fields.name)
         return a.fields.name - b.fields.name
       })
+      console.log(updateddocs)
       replaceDocs(updateddocs)
   })
 
