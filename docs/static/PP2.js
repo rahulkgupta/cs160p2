@@ -22,7 +22,7 @@ $(document).ready(function() {
     $("#prismmenu").hide();
 
 
-  var updateddocs = []
+  var updateddocs = docs
 
   function toString(color){
     string = "black " + color + " black"
@@ -241,12 +241,29 @@ $(document).ready(function() {
   $("#name_sort").click(function () {
       updateddocs.sort(function (a,b) {
         if( a.fields.name > b.fields.name) {
-          return -1 
-        } else return 1
+          return 1 
+        } else return -1
       })
       replaceDocs(updateddocs)
   })
 
+  $("#author_sort").click(function () {
+      updateddocs.sort(function (a,b) {
+        if( a.fields.author > b.fields.author) {
+          return 1 
+        } else return -1
+      })
+      replaceDocs(updateddocs)
+  })
+
+  $("#date_sort").click(function () {
+      updateddocs.sort(function (a,b) {
+        if( a.fields.date > b.fields.date) {
+          return 1 
+        } else return -1
+      })
+      replaceDocs(updateddocs)
+  })
 
   function handleFileSelect(evt) {
     evt.stopPropagation();
