@@ -240,7 +240,8 @@ $(document).ready(function() {
 
   $("#name_sort").click(function () {
       updateddocs.sort(function (a,b) {
-        a.fields.name - b.fields.name
+        console.log(a.fields.name - b.fields.name)
+        return a.fields.name - b.fields.name
       })
       replaceDocs(updateddocs)
   })
