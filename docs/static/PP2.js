@@ -248,21 +248,23 @@ $(document).ready(function() {
   })
 
   $("#author_sort").click(function () {
-      updateddocs.sort(function (a,b) {
-        if( a.fields.author > b.fields.author) {
-          return 1 
-        } else return -1
-      })
-      replaceDocs(updateddocs)
+    console.log('author')
+    updateddocs.sort(function (a,b) {
+      if( a.fields.author > b.fields.author) {
+        return 1 
+      } else return -1
+    })
+    replaceDocs(updateddocs)
   })
 
   $("#date_sort").click(function () {
-      updateddocs.sort(function (a,b) {
-        if( a.fields.date > b.fields.date) {
-          return 1 
-        } else return -1
-      })
-      replaceDocs(updateddocs)
+    console.log('date')
+    updateddocs.sort(function (a,b) {
+      if( a.fields.date > b.fields.date) {
+        return 1 
+      } else return -1
+    })
+    replaceDocs(updateddocs)
   })
 
   function handleFileSelect(evt) {
