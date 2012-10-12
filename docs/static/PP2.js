@@ -7,22 +7,22 @@
 
 $(document).ready(function() {
   
-  lensList = [false, false, false]
-  white = "FFFFFF"
-  color1 = "0000FF" //1
-  color2 = "FF0000" //2
-  color3 = "33CC33" //3
-  color4 = "800080" //12
-  color5 = "408040" //123
-  color6 = "248F61" //13
-  color7 = "99661A" //23
-  $("#lens1menu").hide();
-  $("#lens2menu").hide();
-  $("#lens3menu").hide();
-  $("#prismmenu").hide();
+    lensList = [false, false, false]
+    white = "FFFFFF"
+    color1 = "0000FF" //1
+    color2 = "FF0000" //2
+    color3 = "33CC33" //3
+    color4 = "800080" //12
+    color5 = "408040" //123
+    color6 = "248F61" //13
+    color7 = "99661A" //23
+    $("#lens1menu").hide();
+    $("#lens2menu").hide();
+    $("#lens3menu").hide();
+    $("#prismmenu").hide();
 
 
-
+  var updateddocs = []
 
   function toString(color){
     string = "black " + color + " black"
@@ -95,7 +95,7 @@ $(document).ready(function() {
   }
 
   function filter(l1, l2, l3) {
-    var updateddocs = []
+    
     for (var i in docs) {
       if ((docs[i].fields.java || docs[i].fields.java == l1)
           && (docs[i].fields.design || docs[i].fields.design == l2)
@@ -103,10 +103,9 @@ $(document).ready(function() {
         updateddocs.push(docs[i])
       } 
     }
-    $("#docs_list").html("")
-    for (var j in updateddocs) {
-      $("#docs_list").append("<li> " + updateddocs[j].fields.name + "</li>")
-    }
+
+    replaceDocs(updateddocs)
+    
   }
 
   var lens1y = parseInt($("#lens1").css("top"),10)
@@ -239,16 +238,12 @@ $(document).ready(function() {
     ); 
   });
 
-
-
-  
-
-
-
-
-
-
-
+  $("#name_sort").click(function () {
+      updateddocs.sort(function (a,b) {
+        a.fields.name - b.fields.name
+      })
+      replaceDocs(updateddocs)
+  })
 
 
   function handleFileSelect(evt) {
@@ -293,5 +288,12 @@ $(document).ready(function() {
   //     }
   //   }
   // )
+
+  function replaceDocs (docs) {
+    $("#docs_list").html("")
+    for (var j in docs) {
+      $("#docs_list").append("<li> " + docs[j].fields.name + "</li>")
+    }
+  }
 
 })
