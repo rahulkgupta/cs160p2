@@ -103,8 +103,10 @@ $(document).ready(function() {
         updateddocs.push(docs[i])
       } 
     }
-
-    console.log(updateddocs)
+    $("#docs_list").html("")
+    for (var j in updateddocs) {
+      $("#docs_list").append("<li> " + updateddocs[j].fields.name + "</li>")
+    }
   }
 
   var lens1y = parseInt($("#lens1").css("top"),10)
