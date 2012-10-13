@@ -7,22 +7,22 @@
 
 $(document).ready(function() {
   
-  lensList = [false, false, false]
-  white = "FFFFFF"
-  color1 = "0000FF" //1
-  color2 = "FF0000" //2
-  color3 = "33CC33" //3
-  color4 = "800080" //12
-  color5 = "408040" //123
-  color6 = "248F61" //13
-  color7 = "99661A" //23
-  $("#lens1menu").hide();
-  $("#lens2menu").hide();
-  $("#lens3menu").hide();
-  $("#prismmenu").hide();
+    lensList = [false, false, false]
+    white = "FFFFFF"
+    color1 = "0000FF" //1
+    color2 = "FF0000" //2
+    color3 = "33CC33" //3
+    color4 = "800080" //12
+    color5 = "408040" //123
+    color6 = "248F61" //13
+    color7 = "99661A" //23
+    $("#lens1menu").hide();
+    $("#lens2menu").hide();
+    $("#lens3menu").hide();
+    $("#prismmenu").hide();
 
 
-
+  var updateddocs = docs
 
   function toString(color){
     string = "black " + color + " black"
@@ -36,49 +36,57 @@ $(document).ready(function() {
       ($("#beam2").css("background-color", color1));
       ($("#beam3").css("background-color", color4));
       ($("#beam4").css("background-color", color5));
-      ($(".finalLight").css("border-color", toString(color5)));
+      $("#grad2").css("stop-color", color5);
+      filter(true, true, true)
     }
     else if ((lens1down==true) && (lens2down == false) && (lens3down == false)){
       ($("#beam2").css("background-color", color1));
       ($("#beam3").css("background-color", color1));
       ($("#beam4").css("background-color", color1));
-      ($(".finalLight").css("border-color", toString(color1)));
+      $("#grad2").css("stop-color", color1);
+      filter(true, false, false)
     }
     else if ((lens1down==true) && (lens2down == true) && (lens3down == false)){
       ($("#beam2").css("background-color", color1));
       ($("#beam3").css("background-color", color4));
       ($("#beam4").css("background-color", color4));
-      ($(".finalLight").css("border-color", toString(color4)));
+      $("#grad2").css("stop-color", color4);
+      filter(true, true, false)
     }
     else if ((lens1down==true) && (lens2down == false) && (lens3down == true)){
       ($("#beam2").css("background-color", color1));
       ($("#beam3").css("background-color", color1));
       ($("#beam4").css("background-color", color6));
-      ($(".finalLight").css("border-color", toString(color6)));
+      $("#grad2").css("stop-color", color6);
+      filter(true, false, true)
     }
     else if ((lens1down==false) && (lens2down == false) && (lens3down == true)){
       ($("#beam2").css("background-color", white));
       ($("#beam3").css("background-color", white));
       ($("#beam4").css("background-color", color3));
-      ($(".finalLight").css("border-color", toString(color3)));
+      $("#grad2").css("stop-color", color3);
+      filter(false, false, true)
     }
     else if ((lens1down==false) && (lens2down == true) && (lens3down == false)){
        ($("#beam2").css("background-color", white));
        ($("#beam3").css("background-color", color2));
        ($("#beam4").css("background-color", color2));
-       ($(".finalLight").css("border-color", toString(color2)));
+       $("#grad2").css("stop-color", color2);
+       filter(true, true, false)
     }
     else if ((lens1down==false) && (lens2down == true) && (lens3down == true)){
       ($("#beam2").css("background-color", white));
       ($("#beam3").css("background-color", color2));
       ($("#beam4").css("background-color", color7));
-      ($(".finalLight").css("border-color", toString(color7)));
+      $("#grad2").css("stop-color", color7);
+      filter(false, true, true)
     }
     else if ((lens1down==false) && (lens2down == false) && (lens3down == false)){
       ($("#beam2").css("background-color", white));
       ($("#beam3").css("background-color", white));
       ($("#beam4").css("background-color", white));
-      ($(".finalLight").css("border-color", toString(white)));
+      $("#grad2").css("stop-color", "black")
+      filter(false, false, false)
     }
 
     lensList[0] = lens1down
@@ -86,6 +94,19 @@ $(document).ready(function() {
     lensList[2] = lens3down  
   }
 
+  function filter(l1, l2, l3) {
+    updateddocs = []
+    for (var i in docs) {
+      if ((docs[i].fields.java || docs[i].fields.java == l1)
+          && (docs[i].fields.design || docs[i].fields.design == l2)
+          && (docs[i].fields.math || docs[i].fields.math == l3)) {
+        updateddocs.push(docs[i])
+      } 
+    }
+    //need to put in an ordering component
+    replaceDocs(updateddocs)
+    
+  }
 
   var lens1y = parseInt($("#lens1").css("top"),10)
   var lens2y = parseInt($("#lens2").css("top"),10)
@@ -217,75 +238,34 @@ $(document).ready(function() {
     ); 
   });
 
+  $("#name_sort").click(function () {
+      updateddocs.sort(function (a,b) {
+        if( a.fields.name > b.fields.name) {
+          return 1 
+        } else return -1
+      })
+      replaceDocs(updateddocs)
+  })
 
-    var lens1show = true;
-    var lens2show = true;
-    var lens3show = true;
-    var prismshow = true;
+  $("#author_sort").click(function () {
+    console.log('author')
+    updateddocs.sort(function (a,b) {
+      if( a.fields.author > b.fields.author) {
+        return 1 
+      } else return -1
+    })
+    replaceDocs(updateddocs)
+  })
 
-
-    $("#lens1").mouseenter(function() {
-        
-        if (lens1show == true){
-          $("#lens1menu").show();
-          lens1show = false
-        }
-        else{
-          $("#lens1menu").hide();
-          lens1show = true
-        }
-
-    });
-
-
-
-    $("#lens2").mouseenter(function() {
-        
-        if (lens2show == true){
-          $("#lens2menu").show();
-          lens2show = false
-        }
-        else{
-          $("#lens2menu").hide();
-          lens2show = true
-        }
-
-    });
-
-
-    $("#lens3").mouseenter(function() {
-        
-        if (lens3show == true){
-          $("#lens3menu").show();
-          lens3show = false
-        }
-        else{
-          $("#lens3menu").hide();
-          lens3show = true
-        }
-
-    });
-
-
-    $(".prism").mouseenter(function() {
-        
-        if (prismshow == true){
-          $("#prismmenu").show();
-          prismshow = false
-        }
-        else{
-          $("#prismmenu").hide();
-          prismshow = true
-        }
-
-
-
-
-
-    });
-
-
-
+  $("#date_sort").click(function () {
+    console.log('date')
+    updateddocs.sort(function (a,b) {
+      if( a.fields.date > b.fields.date) {
+        return 1 
+      } else return -1
+    })
+    replaceDocs(updateddocs)
+  })
 
   function handleFileSelect(evt) {
     evt.stopPropagation();
@@ -315,9 +295,26 @@ $(document).ready(function() {
   dropZone.addEventListener('dragover', handleDragOver, false);
   dropZone.addEventListener('drop', handleFileSelect, false);
 
+  var showmenu = false
 
+  // $(".prism").hover(
+  //   function (e) {
+  //     $("#prism_menu").css("display", "block")
+  //     $("#prism_menu").css("left", e.clientX)
+  //     $("#prism_menu").css("top", e.clientY)
+  //   },
+  //   function (e) {
+  //     if (!showmenu) {
+  //       $("#prism_menu").css("display", "none")
+  //     }
+  //   }
+  // )
 
-
-
+  function replaceDocs (docs) {
+    $("#docs_list").html("")
+    for (var j in docs) {
+      $("#docs_list").append("<li> " + docs[j].fields.name + "</li>")
+    }
+  }
 
 })

@@ -32,6 +32,33 @@ span{ display: block; }
   top: 150px;
 }
 
+#lens1:hover > #lens1_desc {
+  visibility: visible;
+}
+
+#lens2:hover > #lens2_desc {
+  visibility: visible;
+}
+
+#lens3:hover > #lens3_desc {
+  visibility: visible;
+}
+
+#lens1_desc {
+  position: absolute;
+  left: 20px;
+
+}
+#lens2_desc {
+  position: absolute;
+  left: 20px;
+}
+
+#lens3_desc {
+  /*background-color: white;*/
+  position: absolute;
+  left: 20px;
+}
 #beam1 {
   background-color: white;
   position: absolute;
@@ -39,7 +66,6 @@ span{ display: block; }
   height: 5px;
   left: 0px;
   top: 300px;
-  opacity:0.90;
 }
 #beam2 {
   background-color: white;
@@ -48,7 +74,6 @@ span{ display: block; }
   height: 5px;
   left: 100px;
   top: 300px;
-  opacity:0.80;
 }
 #beam3 {
   background-color: white;
@@ -57,7 +82,16 @@ span{ display: block; }
   height: 5px;
   left: 200px;
   top: 300px;
-  opacity:0.70;
+}
+
+#docs_list
+{
+  position: absolute;
+  left: 900px;
+  top: 190px;
+  width: 200px;
+  height: 200px;
+  background-color: white;
 }
 #beam4 {
   background-color: white;
@@ -66,24 +100,20 @@ span{ display: block; }
   height: 5px;
   left: 300px;
   top: 300px;
-  opacity:0.6;
 }
 
 
-
+.beam
+{
+  border: 0px;
+}
 
 .finalLight{
-  background-color: white;
   position: absolute;
-  width:  0;
-  height: 0;
-  left: 740px;
-  top: 1px;
-  opacity:0.4;
-  border-color: black white black;
-  border-style: solid;
-  border-width: 300px 500px 300px 0px;
-
+  width: 500;
+  height: 275;
+  left: 690px;
+  top: 150px;
 }
 
 .prism {
@@ -95,6 +125,15 @@ span{ display: block; }
   left: 660px;
   top: 260px;
 }
+
+.lens_desc
+{
+  width: 100px;
+  background:white;
+  visibility: hidden;
+  z-index: 2;
+}
+
 
 #lens1menu {
   position: absolute;
@@ -114,13 +153,19 @@ span{ display: block; }
   top: 250px;
 }
 
-#prismmenu{
-
+#prism_menu{
   position: absolute;
-  left: 660px;
-  top: 400px;
-
+  visibility: hidden;
+  background-color: white;
+  top:40px;
 }
+
+.prism:hover > #prism_menu
+{
+  visibility:visible;
+}
+
+
 
 
 

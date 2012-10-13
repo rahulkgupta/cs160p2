@@ -2,14 +2,19 @@
 
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="style.css" />
-<script type="text/javascript" src="jQuery.js"></script>
-<script type="text/javascript" src="PP2.js"></script>
-<link rel="stylesheet" type="text/css" href="dropdown/dropdown.css" />
-<script type="text/javascript" src="dropdown/dropdown.js"></script>
-</head>
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}style.css" />
+<script type="text/javascript">
+    var docs = {{jsdocs|safe}}
+    var test = "test"
+</script>
+<script type="text/javascript" src="{{ STATIC_URL }}jQuery.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}PP2.js"></script>
+<!-- <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}dropdown/dropdown.css" />
+<script type="text/javascript" src="{{ STATIC_URL }}dropdown/dropdown."></script>
+ --></head>
 
 <body>
+
 
 
 <!-- style="visibility:hidden;" -->
@@ -19,71 +24,44 @@
 <div class="beam" id="beam3"></div>
 <div class="beam" id="beam4"></div>
 
-<div class="lens" id="lens1"></div>
-<div class="lens" id="lens2"></div>
-<div class="lens" id="lens3"></div>
+<div class="lens" id="lens1">
+    <div class="lens_desc" id="lens1_desc">Use this filter to show all the works using Java</div>
+</div>
+<div class="lens" id="lens2">
+    <div class="lens_desc" id="lens2_desc">Use this filter to show all the works with design</div>
+</div>
+<div class="lens" id="lens3">
+    <div class="lens_desc" id="lens3_desc">Use this filter to show all the works using math</div>
+</div>
 
+<ul id="docs_list">
+    {% for doc in docs %}
+        <li>{{ doc.name }}</li>
+    {% endfor %}
+</ul>
+<svg class="finalLight" id="drop_zone" width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
 
-<div class="finalLight" id="drop_zone"></div>
+<defs>
+<linearGradient id="fill" x1="0%" y1="0%" x2="0%" y2="100%">
+<stop id="grad1" offset="0%" style="stop-color:#FFF;stop-opacity:.5"/>
+<stop id="grad2" offset="100%" style="stop-color:#000;stop-opacity:.5"/>
+    
+</linearGradient>
+</defs>
 
-<div class="prism"></div>
+<path d="M 50 150 L 200 25 L 500 25 L 500 275 L 200 275 z" stroke="colourname" fill="url(#fill)"/>
 
-<dl class="dropdown" id="lens1menu">
-	<dt id="lens1-ddheader" onClick="ddMenu('lens1',1)" onmouseout="ddMenu('lens1',-1)">Lens 1 Menu</dt>
-	<dd id="lens1-ddcontent" onmouseover="cancelHide('lens1')" onmouseout="ddMenu('lens1',-1)">
-	<ul>
-	<li><a href="#" class="underline">Object 1</a></li>
-	<li><a href="#" class="underline">Object 2</a></li>
-	<li><a href="#" class="underline">Object 3</a></li>
-	<li><a href="#" class="underline">Object 4</a></li>
-	<li><a href="#">Object 5</a></li>
-	</ul>
-</dl>
-
-<dl class="dropdown" id="lens2menu">
-	<dt id="lens2-ddheader" onClick="ddMenu('lens2',1)" onmouseout="ddMenu('lens2',-1)">Lens 2 Menu</dt>
-	<dd id="lens2-ddcontent" onmouseover="cancelHide('lens2')" onmouseout="ddMenu('lens2',-1)">
-	<ul>
-	<li><a href="#" class="underline">Object 1</a></li>
-	<li><a href="#" class="underline">Object 2</a></li>
-	<li><a href="#" class="underline">Object 3</a></li>
-	<li><a href="#" class="underline">Object 4</a></li>
-	<li><a href="#">Object 5</a></li>
-	</ul>
-</dl>
-
-<dl class="dropdown" id="lens3menu">
-	<dt id="lens3-ddheader" onClick="ddMenu('lens3',1)" onmouseout="ddMenu('lens3',-1)">Lens 3 Menu</dt>
-	<dd id="lens3-ddcontent" onmouseover="cancelHide('lens3')" onmouseout="ddMenu('lens3',-1)">
-	<ul>
-	<li><a href="#" class="underline">Object 1</a></li>
-	<li><a href="#" class="underline">Object 2</a></li>
-	<li><a href="#" class="underline">Object 3</a></li>
-	<li><a href="#" class="underline">Object 4</a></li>
-	<li><a href="#">Object 5</a></li>
-	</ul>
-</dl>
-
-
-
-<dl class="dropdown" id="prismmenu">
-	<dt id="prism-ddheader" onClick="ddMenu('prism',1)" onmouseout="ddMenu('prism',-1)">Prism Menu</dt>
-	<dd id="prism-ddcontent" onmouseover="cancelHide('prism')" onmouseout="ddMenu('prism',-1)">
-	<ul>
-	<li><a href="#" class="underline">Object 1</a></li>
-	<li><a href="#" class="underline">Object 2</a></li>
-	<li><a href="#" class="underline">Object 3</a></li>
-	<li><a href="#" class="underline">Object 4</a></li>
-	<li><a href="#">Object 5</a></li>
-	</ul>
-</dl>
-
-
-
-
-
-
-
+</svg>​
+<div class="prism">
+    <div id="prism_menu">
+        <div>Order By:</div>
+        <ul>
+            <li id="name_sort">NAME</li>
+            <li id="date_sort">DATE</li>
+            <li id="author_sort">AUTHOR</li>
+        </ul>   
+    </div>
+</div>
 
 </body>
 </html>
