@@ -47,19 +47,19 @@ span{ display: block; }
 #lens1_desc {
   position: absolute;
   left: -35px;
-  top: 100px;
+  top: -100px;
 
 }
 #lens2_desc {
   position: absolute;
   left: -35px;
-  top: 100px;
+  top: -100px;
 }
 
 #lens3_desc {
   position: absolute;
   left: -35px;
-  top: 100px;
+  top: -100px;
 }
 #beam1 {
   background-color: white;
