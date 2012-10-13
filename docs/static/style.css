@@ -161,7 +161,8 @@ span{ display: block; }
   visibility: hidden;
   background-color: white;
   top:75px;
-  left:25px;
+  left:35px;
+  opacity: 0.8;
 }
 
 .prism:hover > #prism_menu
