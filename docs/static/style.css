@@ -160,7 +160,8 @@ span{ display: block; }
   position: absolute;
   visibility: hidden;
   background-color: white;
-  top:40px;
+  top:75px;
+  left:25px;
 }
 
 .prism:hover > #prism_menu
