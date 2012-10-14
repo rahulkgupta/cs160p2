@@ -170,13 +170,14 @@ span{ display: block; }
 #order_list
 {
   list-style: none;
-  border-style: solid;
-  border-width: 5px;
+
 
 }
 
-#order_list:li
+li#order_list
 {
+  border-style: solid;
+  border-width: 5px;
   padding-top: 5px;
   padding-bottom: 5px;
 }
