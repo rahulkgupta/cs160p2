@@ -46,18 +46,20 @@ span{ display: block; }
 
 #lens1_desc {
   position: absolute;
-  left: 20px;
+  left: -35px;
+  top: -100px;
 
 }
 #lens2_desc {
   position: absolute;
-  left: 20px;
+  left: -35px;
+  top: -100px;
 }
 
 #lens3_desc {
-  /*background-color: white;*/
   position: absolute;
-  left: 20px;
+  left: -35px;
+  top: -100px;
 }
 #beam1 {
   background-color: white;
@@ -91,7 +93,8 @@ span{ display: block; }
   top: 190px;
   width: 200px;
   height: 200px;
-  background-color: white;
+  background-color: black;
+  color: white;
 }
 #beam4 {
   background-color: white;
@@ -158,7 +161,9 @@ span{ display: block; }
   position: absolute;
   visibility: hidden;
   background-color: white;
-  top:40px;
+  top:75px;
+  left:35px;
+  opacity: 0.8;
 }
 
 .prism:hover > #prism_menu
