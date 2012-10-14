@@ -280,6 +280,17 @@ $(document).ready(function() {
                   f.lastModifiedDate ? f.lastModifiedDate.toLocaleDateString() : 'n/a');
       console.log(output)
       console.log(lens1down, lens2down, lens3down)
+      var doc = {fields: 
+                  {
+                    author: "user", 
+                    date: f.lastModifiedDate, 
+                    design: lens2down, 
+                    java: lens1down, 
+                    math: lens3down,
+                    name: f.name
+                  }
+                }
+      docs.push(doc)
     }
     //document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
   }
