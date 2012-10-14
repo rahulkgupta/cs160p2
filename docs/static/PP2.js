@@ -291,6 +291,7 @@ $(document).ready(function() {
                   }
                 }
       docs.push(doc)
+      filter(lens1down, lens2down, lens3down)
     }
     //document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
   }
