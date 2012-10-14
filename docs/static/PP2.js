@@ -279,6 +279,7 @@ $(document).ready(function() {
       output.push(escape(f.name),
                   f.lastModifiedDate ? f.lastModifiedDate.toLocaleDateString() : 'n/a');
       console.log(output)
+      console.log(lens1down, lens2down, lens3down)
     }
     //document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
   }
